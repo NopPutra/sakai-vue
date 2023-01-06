@@ -1,6 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import AppLayout from '@/layout/AppLayout.vue';
 
+import ProductList from '@/views/pages/products/ProductList.vue';
+
 const router = createRouter({
     history: createWebHashHistory(),
     routes: [
@@ -12,6 +14,10 @@ const router = createRouter({
                     path: '/',
                     name: 'dashboard',
                     component: () => import('@/views/Dashboard.vue')
+                },
+                {
+                    path: '/products',
+                    component: ProductList,
                 },
                 {
                     path: '/uikit/formlayout',
@@ -140,7 +146,7 @@ const router = createRouter({
                     path: '/documentation',
                     name: 'documentation',
                     component: () => import('@/views/utilities/Documentation.vue')
-                }
+                },
             ]
         },
         {

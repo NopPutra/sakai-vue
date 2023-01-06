@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
+import store from './store/index.js';
 
 import PrimeVue from 'primevue/config';
 import AutoComplete from 'primevue/autocomplete';
@@ -102,11 +103,14 @@ import VirtualScroller from 'primevue/virtualscroller';
 
 import CodeHighlight from '@/components/CodeHighlight.vue';
 import BlockViewer from '@/components/BlockViewer.vue';
+import vSelect from 'vue-select';
 
 import '@/assets/styles.scss';
+import 'vue-select/dist/vue-select.css';
 
 const app = createApp(App);
 
+app.use(store);
 app.use(router);
 app.use(PrimeVue, { ripple: true });
 app.use(ToastService);
@@ -210,5 +214,6 @@ app.component('TreeSelect', TreeSelect);
 app.component('TreeTable', TreeTable);
 app.component('TriStateCheckbox', TriStateCheckbox);
 app.component('VirtualScroller', VirtualScroller);
+app.component('v-select', vSelect);
 
 app.mount('#app');
