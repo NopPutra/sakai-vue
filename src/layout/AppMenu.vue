@@ -9,6 +9,10 @@ const model = ref([
         items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' }]
     },
     {
+        label: 'Products',
+        items: [{ label: 'Products', to: '/products' }]
+    },
+    {
         label: 'UI Components',
         items: [
             { label: 'Form Layout', icon: 'pi pi-fw pi-id-card', to: '/uikit/formlayout' },
@@ -26,7 +30,7 @@ const model = ref([
             { label: 'Message', icon: 'pi pi-fw pi-comment', to: '/uikit/message' },
             { label: 'File', icon: 'pi pi-fw pi-file', to: '/uikit/file' },
             { label: 'Chart', icon: 'pi pi-fw pi-chart-bar', to: '/uikit/charts' },
-            { label: 'Misc', icon: 'pi pi-fw pi-circle', to: '/uikit/misc' }
+            { label: 'Misc', icon: 'pi pi-fw pi-circle', to: '/uikit/misc' },
         ]
     },
     {
